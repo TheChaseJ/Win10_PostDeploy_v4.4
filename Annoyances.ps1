@@ -1,7 +1,7 @@
 <#	
 	.NOTES
 	===========================================================================
-	 Updated:   	6/7/2019 12:26 PM
+	 Updated:   	7/10/2019 12:26 PM
 	 Creators:     	Jon Childers & Chase Jones
 	 Organization: 	JMF Technologies  	
 	===========================================================================
@@ -87,6 +87,10 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtec
 
 # Start Menu Disable Bing Search Results
     Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search' -Name 'BingSearchEnabled' -Value 0
+
+# Disable Blurred Background on Login
+    Write-Output "Disabling Blurred Background on Login"
+    New-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' -Name 'DisableAcrylicBackgroundOnLogon' -Type DWORD -Value 1
 
 # Remove Edge icon on desktop
     Write-Output "Disabling Edge Desktop Shortcut Creation"
