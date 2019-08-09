@@ -37,11 +37,11 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtec
 
 # Enable and start Remote Registry
     Write-Output "Enabling and Starting Remote Registry"
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'ImagePath' -Value 'C:\Windows\system32\svchost.exe -k localService -p'
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'DisplayName' -Value 'Remote Registry'
+    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'ImagePath' -Value '%SystemRoot%\system32\svchost.exe -k localService'
+    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'DisplayName' -Value '@regsvc.dll,-1'
     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'Description' -Value '@regsvc.dll,-2'
     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'ObjectName' -Value 'NT AUTHORITY\LocalService'
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'Start' -Value 2
+    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'Start' -Value 4
     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'Type' -Value 32
     Start-Service RemoteRegistry
 
