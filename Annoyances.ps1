@@ -9,8 +9,6 @@
 	This file will disable annoyances in Windows 10.
 #>
 
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
-
 # Lower UAC level (disabling it completely would break apps)
     Write-Output "Lowering UAC level..."
     Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name 'ConsentPromptBehaviorAdmin' -Value 0
@@ -25,7 +23,7 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtec
 
 # Change Control Panel view to "small icons"
     Write-Output "Change Control Panel view"
-    Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel' -Name'AllItemsIconView' -Value 1
+    Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel' -Name 'AllItemsIconView' -Value 1
 
 # Change Explorer home screen back to "This PC"
     Write-Output "Changing Explorer home to This PC"
