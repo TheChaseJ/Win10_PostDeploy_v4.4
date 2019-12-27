@@ -52,7 +52,7 @@
     Write-Output "Hide Task View Button"
     Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'ShowTaskViewButton' -Value 0
 
-#Remove People from the Taskbar
+# Remove People from the Taskbar
     Write-Host "Removing People from the taskbar"
     Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People' -Name 'PeopleBand' -Value 0
 
