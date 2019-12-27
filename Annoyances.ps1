@@ -34,19 +34,13 @@
     Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'TaskbarGlomLevel' -Value 2
 
 # Enable and start Remote Registry
-    Write-Output "Enabling and Starting Remote Registry"
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'ImagePath' -Value '%SystemRoot%\system32\svchost.exe -k localService'
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'DisplayName' -Value '@regsvc.dll,-1'
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'Description' -Value '@regsvc.dll,-2'
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'ObjectName' -Value 'NT AUTHORITY\LocalService'
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'Start' -Value 4
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\RemoteRegistry' -Name 'Type' -Value 32
-    Start-Service RemoteRegistry
+    Set-Service –Name remoteregistry -StartupType Automatic 
+    Get-Service remoteregistry | start-service 
 
 # Enable and start Windows Remote Management (WS-Management)
     Write-Output "Enabling and Starting Remote Management"
-    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\WinRM' -Name 'Start' -Value 2
-    Start-Service WinRM
+    Set-Service –Name WinRM -StartupType Automatic 
+    Get-Service WinRM | start-service 
 
 # Set NumLock ON at Windows login screen
     $path = 'HKU:\.DEFAULT\Control Panel\Keyboard\'
