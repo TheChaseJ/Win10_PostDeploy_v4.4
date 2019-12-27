@@ -48,6 +48,10 @@
     $value = '2'
     Set-Itemproperty -Path $path -Name $name -Value $value
 
+# Hide Taskbar Search icon / box
+    Write-Output "Hiding Taskbar Search icon / box..."
+    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
+	
 # Hide Task View button
     Write-Output "Hide Task View Button"
     Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'ShowTaskViewButton' -Value 0
