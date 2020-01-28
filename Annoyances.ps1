@@ -43,14 +43,11 @@
     Get-Service WinRM | start-service 
 
 # Set NumLock ON at Windows login screen
-    $path = 'HKU:\.DEFAULT\Control Panel\Keyboard\'
-    $name = 'InitialKeyboardIndicators'
-    $value = '2'
-    Set-Itemproperty -Path $path -Name $name -Value $value
+    Set-Itemproperty -Path 'HKU:\.DEFAULT\Control Panel\Keyboard\' -Name 'InitialKeyboardIndicators' -Value 2
 
 # Hide Taskbar Search icon / box
     Write-Output "Hiding Taskbar Search icon / box..."
-    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
+    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name 'SearchboxTaskbarMode' -Type DWord -Value 0
 	
 # Hide Task View button
     Write-Output "Hide Task View Button"
