@@ -11,4 +11,3 @@ choco install dotnetfx
 # choco install microsoft-teams
 choco install 7zip.install
 # choco install notepadplusplus.install
-# 
