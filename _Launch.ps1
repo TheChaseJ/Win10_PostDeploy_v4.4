@@ -29,7 +29,7 @@ $PSScriptRoot
 #################################################################################
 Add-Type -AssemblyName PresentationFramework
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Do you want to install Chocolatey?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Do you want to install Chocolatey?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -58,7 +58,7 @@ Write-Host "Skipping Task"
   Write-Host "WARNING!!! MAKE SURE YOU READ THE MESSAGES ABOVE!!!" -ForegroundColor yellow -BackgroundColor black
   Pause 
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Remove Default Apps?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Remove Default Apps?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -76,7 +76,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Disable Tasks?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Disable Tasks?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -94,7 +94,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Unpin Taskbar Apps?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Unpin Taskbar Apps?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -112,7 +112,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Unpin Start Menu Apps?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Unpin Start Menu Apps?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -130,7 +130,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Remove Annoyances?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Remove Annoyances?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -148,7 +148,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Protect Privacy?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Protect Privacy?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -166,7 +166,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Show File Extensions?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Show File Extensions?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -184,7 +184,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Disable Edge as PDF viewer?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Disable Edge as PDF viewer?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -202,7 +202,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Optimize Power Plan?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Optimize Power Plan?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -220,7 +220,7 @@ Write-Host "Skipping Task"
 
   }
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('Would you like to start cleanup? *May disable reverting back to Windows 7*','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Would you like to start cleanup? *May disable reverting back to Windows 7*','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
@@ -240,7 +240,7 @@ Write-Host "Skipping Task"
 
 write-host "Finished"
 
-$msgBoxInput =  [System.Windows.MessageBox]::Show('A system reboot is necessary to complete some task. Reboot your PC?','Win10 Post Deploy v4.4','YesNo','Question')
+$msgBoxInput =  [System.Windows.MessageBox]::Show('A system reboot is necessary to complete some task. Reboot your PC?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
 
