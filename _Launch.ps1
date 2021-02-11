@@ -130,6 +130,24 @@ Write-Host "Skipping Task"
 
   }
 
+$msgBoxInput =  [System.Windows.MessageBox]::Show('Remove Quick Access from Explorer?','Win10 Post Deploy v4.5','YesNo','Question')
+
+  switch  ($msgBoxInput) {
+
+  'Yes' {
+
+& "$PSScriptRoot\RemoveQuickAccess.ps1"
+
+  }
+
+  'No' {
+
+Write-Host "Skipping Task"
+
+  }
+
+  }
+  
 $msgBoxInput =  [System.Windows.MessageBox]::Show('Remove Annoyances?','Win10 Post Deploy v4.5','YesNo','Question')
 
   switch  ($msgBoxInput) {
